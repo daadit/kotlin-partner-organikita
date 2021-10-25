@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnback"
+                    android:backgroundTint="@null"
+                    android:background="@drawable/ic_back"
+                    android:layout_width="30dp"
+                    android:layout_height="24dp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:textColor="@color/black"
+                        android:gravity="left|center"
+                        android:layout_weight="1"
+                        android:text="Partner Organikita"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"/>
+
+                    <TextView
+                        android:id="@+id/btnbantuan"
+                        android:clickable="true"
+                        android:textStyle="bold"
+                        android:textSize="14dp"
+                        android:textColor="#00aa13"
+                        android:backgroundTint="@null"
+                        android:text="Bantuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"/>
+
+                </LinearLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"
+                    android:text="Silahkan daftarkan toko kamu sekarang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="25dp"
+                android:paddingRight="30dp"
+                android:paddingLeft="30dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:text="Nama Toko"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:inputType="text"
+                    android:id="@+id/txttoko"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:hint="Masukan Sesuai nama toko kamu"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:text="Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:inputType="textEmailAddress"
+                    android:id="@+id/txtemail"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:hint="organikita@gmail.com"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"/>
+
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:text="Nomor Hp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    android:inputType="number"
+                    android:id="@+id/txthp"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:hint="0825xxxxxxxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_above="@+id/line"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btn_daftar"
+                            android:textColor="#00aa13"
+                            android:textSize="13dp"
+                            android:textAllCaps="false"
+                            android:text="Daftar Partner"
+                            android:background="@drawable/bg_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_above="@+id/bottom"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="#00aa13"/>
+
+                    <LinearLayout
+                        android:id="@id/bottom"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical"
+                        android:paddingLeft="18dp"
+                        android:paddingRight="18dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:paddingLeft="18dp"
+                            android:paddingRight="18dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:textSize="12dp"
+                                android:textColor="#000000"
+                                android:text="Dengan masuk, Anda menyetujui "
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:id="@+id/btnketentuan"
+                                android:layout_marginTop="8dp"
+                                android:gravity="left"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                android:textColor="#00aa13"
+                                android:text="Ketentuan pengguna"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                android:textColor="#000000"
+                                android:text=" dan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:paddingLeft="18dp"
+                            android:paddingRight="18dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/btnkebijakan"
+                                android:layout_marginTop="3dp"
+                                android:gravity="left"
+                                android:textSize="12dp"
+                                android:textStyle="bold"
+                                android:textColor="#00aa13"
+                                android:text="Kebijakan privasi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:paddingLeft="18dp"
+                            android:paddingRight="18dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_marginTop="8dp"
+                                android:layout_marginBottom="3dp"
+                                android:gravity="left"
+                                android:textSize="10dp"
+                                android:text="All Right Reserved. Organikita"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

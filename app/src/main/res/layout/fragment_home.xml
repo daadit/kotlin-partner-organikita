@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    tools:context=".fragment.HomeFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvtoko"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppinsbold"
+                    android:gravity="left|center"
+                    android:paddingLeft="20dp"
+                    android:text="Toko Saya"
+                    android:textAllCaps="false"
+                    android:textColor="#00aa13"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:id="@+id/btnhelp"
+                    android:clickable="true"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/ic_baseline_help_outline_24" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefreshHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.core.widget.NestedScrollView
+                android:scrollbarSize="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_marginBottom="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:paddingEnd="30dp"
+                            android:paddingStart="15dp"
+                            android:visibility="gone"
+                            android:id="@+id/vp2_slider"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/shimmerslider">
+
+                            <include
+                                layout="@layout/shimmer_home_slider"/>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/poppinsbold"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textColor="#858585"
+                            android:text="Orderan kamu"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginHorizontal="15dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_marginBottom="10dp"
+                            android:paddingHorizontal="10dp"
+                            android:background="@drawable/bg_green"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.tabs.TabLayout
+                                app:tabRippleColor="@null"
+                                android:longClickable="false"
+                                android:paddingVertical="7dp"
+                                app:tabSelectedTextColor="@color/white"
+                                app:tabIndicatorColor="#008E10"
+                                app:tabTextAppearance="@style/CustomTabStyle"
+                                android:id="@+id/tablayout"
+                                app:tabIndicatorGravity="stretch"
+                                app:tabIndicatorAnimationMode="elastic"
+                                app:tabIndicator="@drawable/tab_indikator"
+                                android:layout_width="match_parent"
+                                android:layout_height="43dp"/>
+
+                        </LinearLayout>
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/vpisi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

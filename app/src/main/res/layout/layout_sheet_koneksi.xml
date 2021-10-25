@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetLogout"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnclosekoneksi"
+            android:backgroundTint="@null"
+            android:background="@drawable/ic_icons8_cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/icons8disconnect"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#858585"
+            android:gravity="center"
+            android:textSize="13dp"
+            android:fontFamily="@font/poppinsbold"
+            android:text="Koneksi kita terputus!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:textColor="#858585"
+            android:gravity="center"
+            android:textSize="11dp"
+            android:fontFamily="@font/poppinslight"
+            android:text="Silahkan hidupkan WiFi atau Data Seluler kamu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:id="@+id/btnnantikoneksi"
+            android:fontFamily="@font/poppinslight"
+            android:textColor="#00aa13"
+            android:textSize="12dp"
+            android:textAllCaps="false"
+            android:text="Nanti"
+            android:background="@drawable/bg_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:textSize="12dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/poppinslight"
+            android:id="@+id/btnpengaturan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn1"
+            android:text="Pengaturan"
+            android:textColor="#ffffff"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>
