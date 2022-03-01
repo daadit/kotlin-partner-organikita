@@ -30,7 +30,7 @@
                     android:fontFamily="@font/poppinslight"
                     android:gravity="left|center"
                     android:paddingLeft="20dp"
-                    android:text="Profil saya"
+                    android:text="Toko saya"
                     android:textAllCaps="false"
                     android:textColor="@color/black"
                     android:textSize="14dp"

@@ -1,6 +1,8 @@
 package com.example.partner_organikita.app
 
+import com.example.partner_organikita.model.ProductModel
 import com.example.partner_organikita.model.ResponseModel
+import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -40,5 +42,17 @@ interface ApiService {
     fun changeDeliveryDetail(
         @Path("id") id: Int,
         @Path("delivery") delivery: Int
+    ):Call<ResponseModel>
+
+    @POST("product/save")
+    fun saveProduct(
+        @Body data: ProductModel,
+    ):Call<ResponseModel>
+
+    @Multipart
+    @POST("product/saveimage")
+    fun saveProductImage(
+        @Path("id") id: Int,
+        @Part image: MultipartBody.Part
     ):Call<ResponseModel>
 }

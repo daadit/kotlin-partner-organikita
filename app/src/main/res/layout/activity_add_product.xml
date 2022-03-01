@@ -346,6 +346,33 @@
                         android:layout_width="match_parent"
                         android:layout_height="10dp"/>
 
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="Panjang produk *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="number"
+                        android:id="@+id/txtpanjang"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppinslight"
+                        android:textSize="14dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/bg_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
                     <LinearLayout
                         android:layout_marginBottom="20dp"
                         android:padding="18dp"

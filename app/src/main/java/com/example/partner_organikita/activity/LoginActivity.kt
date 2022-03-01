@@ -41,31 +41,43 @@ class LoginActivity : AppCompatActivity() {
         }
 
         btnhelp.setOnClickListener {
-            val bottomSheetDialog = BottomSheetDialog(
-                this@LoginActivity, R.style.BottomSheetDialogTheme
-            )
-            val bottomSheetView = LayoutInflater.from(this@LoginActivity).inflate(
-                R.layout.layout_bottom_callcenter,
-                findViewById(R.id.bottomSheetCallCenter)
-            )
-
-            bottomSheetView.findViewById<Button>(R.id.btnclosecallcenter)?.setOnClickListener {
-                bottomSheetDialog.dismiss()
-            }
-
-            bottomSheetView.findViewById<Button>(R.id.btnchat)?.setOnClickListener {
-                val number = "6282171538531"
-                val message = "Hai Admin, Saya butuh bantuan ketika menggunakan aplikasi Organikita Partner. Masalah saya adalah ... . Apa yang harus saya lakukan?"
-                bottomSheetDialog.dismiss()
-                val url = "https://api.whatsapp.com/send?phone="+ number +"&text=" + URLEncoder.encode(message, "UTF-8")
-                val i = Intent(Intent.ACTION_VIEW)
-                i.data = Uri.parse(url)
-                startActivity(i)
-            }
-
-            bottomSheetDialog.setContentView(bottomSheetView)
-            bottomSheetDialog.show()
+            callCenterLayout()
         }
+
+        callcenter.setOnClickListener {
+            callCenterLayout()
+        }
+
+        txtLupaSandi.setOnClickListener {
+            callCenterLayout()
+        }
+    }
+
+    fun callCenterLayout(){
+        val bottomSheetDialog = BottomSheetDialog(
+            this@LoginActivity, R.style.BottomSheetDialogTheme
+        )
+        val bottomSheetView = LayoutInflater.from(this@LoginActivity).inflate(
+            R.layout.layout_bottom_callcenter,
+            findViewById(R.id.bottomSheetCallCenter)
+        )
+
+        bottomSheetView.findViewById<Button>(R.id.btnclosecallcenter)?.setOnClickListener {
+            bottomSheetDialog.dismiss()
+        }
+
+        bottomSheetView.findViewById<Button>(R.id.btnchat)?.setOnClickListener {
+            val number = "6282171538531"
+            val message = "Hai Admin, Saya butuh bantuan ketika menggunakan aplikasi Organikita Partner. Masalah saya adalah ... . Apa yang harus saya lakukan?"
+            bottomSheetDialog.dismiss()
+            val url = "https://api.whatsapp.com/send?phone="+ number +"&text=" + URLEncoder.encode(message, "UTF-8")
+            val i = Intent(Intent.ACTION_VIEW)
+            i.data = Uri.parse(url)
+            startActivity(i)
+        }
+
+        bottomSheetDialog.setContentView(bottomSheetView)
+        bottomSheetDialog.show()
     }
 
     fun login(){

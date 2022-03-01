@@ -13,9 +13,12 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.partner_organikita.R
 import com.example.partner_organikita.app.ApiConfig
+import com.example.partner_organikita.helper.SharedPref
 import com.example.partner_organikita.model.ProductCategoryModel
+import com.example.partner_organikita.model.ProductModel
 import com.example.partner_organikita.model.ResponseModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_add_product.*
 import retrofit2.Call
 import retrofit2.Response
@@ -121,7 +124,38 @@ class AddProductActivity : AppCompatActivity() {
             txtlebar.requestFocus()
             spin_kitadd.visibility = View.GONE
             return
+        }else if(txtpanjang.text.isEmpty()){
+            txtpanjang.error = "Panjang harus disi"
+            txtpanjang.requestFocus()
+            spin_kitadd.visibility = View.GONE
+            return
         }
+
+        val user = SharedPref(this).getUser()!!
+
+        val produk = ProductModel()
+        produk.productName = txtnama.text.toString()
+        produk.productCategory = idcategory
+        produk.productStore = user.storeId
+        produk.productDescription = txtdeskripsi.text.toString()
+        produk.productPrice = Integer.valueOf(txtharga.text.toString())
+        produk.productStock = Integer.valueOf(txtstok.text.toString())
+        produk.productRating = "5"
+        produk.productSold = "1"
+        produk.productStatus = 1
+        produk.productSatuan = txtsatuan.text.toString()
+        produk.productWeight = Integer.valueOf(txtberat.text.toString())
+        produk.productHigh = Integer.valueOf(txttinggi.text.toString())
+        produk.productWide = Integer.valueOf(txtlebar.text.toString())
+        produk.productLength = Integer.valueOf(txtpanjang.text.toString())
+        produk.productImage = "default_product.png"
+
+        val json = Gson().toJson(produk, ProductModel::class.java)
+        val intent = Intent(this, AddImageActivity::class.java)
+        intent.putExtra("extra", json)
+        startActivity(intent)
+
+        spin_kitadd.visibility = View.GONE
     }
 
     private var listCategory: ArrayList<ProductCategoryModel> = ArrayList()

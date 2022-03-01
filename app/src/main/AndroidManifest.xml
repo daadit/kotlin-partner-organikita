@@ -30,6 +30,8 @@
         <activity android:name=".activity.SuccessActivity" />
         <activity android:name=".activity.KebijakanPrivasiActivity" />
         <activity android:name=".activity.KetentuanLayananActivity" />
+        <activity android:name=".activity.HubungiKamiActivity" />
+        <activity android:name=".activity.AddImageActivity" />
     </application>
 
 </manifest>

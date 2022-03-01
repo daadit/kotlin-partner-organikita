@@ -19,4 +19,5 @@ class ProductModel {
     var productPromo = 0
     var productSatuan = ""
     lateinit var created_at: String
+    var id = 0
 }

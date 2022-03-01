@@ -28,12 +28,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
                     android:layout_weight="1"
-                    android:fontFamily="@font/poppinsbold"
+                    android:fontFamily="@font/poppinslight"
                     android:gravity="left|center"
                     android:paddingLeft="20dp"
                     android:text="Toko Saya"
                     android:textAllCaps="false"
-                    android:textColor="#00aa13"
+                    android:textColor="#000000"
                     android:textSize="14dp"
                     android:textStyle="bold" />
 
