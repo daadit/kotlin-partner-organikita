@@ -18,6 +18,6 @@ class ProductModel {
     var productHigh = 0
     var productPromo = 0
     var productSatuan = ""
-    lateinit var created_at: String
+    var created_at = ""
     var id = 0
 }

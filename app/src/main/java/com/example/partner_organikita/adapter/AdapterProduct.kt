@@ -41,6 +41,7 @@ class AdapterProduct(var activity: Activity, var data: ArrayList<ProductModel>, 
 
         holder.tvNamaProduk.text = a.productName
         val formatBaru = "d MMM yyyy"
+        holder.tvTanggal.text = Helper().convertTanggalTwo(a.created_at, formatBaru)
         holder.tvHarga.text = Helper().changeCurrency(a.productPrice)
         holder.tvQty.text = "Stok : " +  a.productStock
         if (a.productStatus == 1){
