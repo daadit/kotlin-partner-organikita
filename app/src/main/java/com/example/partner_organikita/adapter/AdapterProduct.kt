@@ -3,18 +3,22 @@ package com.example.partner_organikita.adapter
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.front_startup.helper.Helper
 import com.example.partner_organikita.R
+import com.example.partner_organikita.activity.DetailProductActivity
 import com.example.partner_organikita.model.ProductModel
 import com.example.partner_organikita.util.Config
+import com.google.gson.Gson
 import com.squareup.picasso.Picasso
 import kotlin.collections.ArrayList
 
@@ -26,6 +30,7 @@ class AdapterProduct(var activity: Activity, var data: ArrayList<ProductModel>, 
         val tvHarga = view.findViewById<TextView>(R.id.tvharga)
         val tvQty = view.findViewById<TextView>(R.id.tvqty)
         val ivGambar = view.findViewById<ImageView>(R.id.ivgambarproduk)
+        val buttonDetail = view.findViewById<Button>(R.id.btncek)
     }
 
     lateinit var context: Context
@@ -58,6 +63,13 @@ class AdapterProduct(var activity: Activity, var data: ArrayList<ProductModel>, 
             .error(R.drawable.organikita)
             .centerCrop()
             .into(holder.ivGambar)
+
+        holder.buttonDetail.setOnClickListener{
+            val str = Gson().toJson(data[position], ProductModel::class.java)
+            val ip = Intent(activity, DetailProductActivity::class.java)
+            ip.putExtra("extra", str )
+            activity.startActivity(ip)
+        }
     }
 
     interface Listeners{

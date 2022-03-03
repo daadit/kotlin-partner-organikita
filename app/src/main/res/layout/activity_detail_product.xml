@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".activity.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/btnback"
+                        android:clickable="true"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_back_green" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/poppinslight"
+                        android:gravity="left|center"
+                        android:paddingLeft="20dp"
+                        android:text="Detail Produk"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <RelativeLayout
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:id="@+id/btnhelpaddproduct"
+                        android:clickable="true"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_baseline_help_outline_24" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:paddingTop="25dp"
+                    android:paddingRight="30dp"
+                    android:paddingLeft="30dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="Nama produk *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="text"
+                        android:id="@+id/txtnama"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppinslight"
+                        android:textSize="13dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/bg_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="Category produk *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <Spinner
+                        android:layout_marginBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:background="@drawable/bg_text_view"
+                        android:id="@+id/spinner_category"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:textSize="14dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="Deskripsi produk *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:gravity="left"
+                        android:inputType="textMultiLine"
+                        android:lines="10"
+                        android:id="@+id/txtdeskripsi"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppinslight"
+                        android:textSize="13dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        android:background="@drawable/bg_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="Harga produk *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="15dp"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/poppinsbold"
+                            android:textColor="#858585"
+                            android:text="Rp."
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:inputType="number"
+                            android:id="@+id/txtharga"
+                            android:textStyle="bold"
+                            android:fontFamily="@font/poppinslight"
+                            android:textSize="14dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:background="@drawable/bg_text_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"/>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="Stok produk *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="number"
+                        android:id="@+id/txtstok"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppinslight"
+                        android:textSize="14dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/bg_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="Satuan produk *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="text"
+                        android:id="@+id/txtsatuan"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppinslight"
+                        android:textSize="14dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/bg_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="Berat produk *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="number"
+                        android:id="@+id/txtberat"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppinslight"
+                        android:textSize="14dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/bg_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="Tinggi produk *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="number"
+                        android:id="@+id/txttinggi"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppinslight"
+                        android:textSize="14dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/bg_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="Lebar produk *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="number"
+                        android:id="@+id/txtlebar"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppinslight"
+                        android:textSize="14dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/bg_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:paddingBottom="5dp"
+                        android:textSize="12dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppinslight"
+                        android:text="Panjang produk *"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:inputType="number"
+                        android:id="@+id/txtpanjang"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppinslight"
+                        android:textSize="14dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:background="@drawable/bg_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"/>
+
+                    <LinearLayout
+                        android:layout_marginBottom="20dp"
+                        android:padding="18dp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/btn_selanjutnya"
+                            android:fontFamily="@font/poppinslight"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:textAllCaps="false"
+                            android:text="Selanjutnya"
+                            android:background="@drawable/bg_btn1"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/spin_kitadd"
+            style="@style/SpinKitView.Large.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/greendark" />
+
+    </RelativeLayout>
+
+</LinearLayout>

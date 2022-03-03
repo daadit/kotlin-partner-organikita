@@ -108,11 +108,12 @@
                             android:layout_margin="10dp"
                             android:layout_weight="1"
                             android:textSize="12dp"
-                            android:fontFamily="@font/poppinsbold"
+                            android:fontFamily="@font/poppinslight"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="10dp"
-                            android:textColor="#858585"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
                             android:text="Orderan kamu"/>
 
                     </LinearLayout>
