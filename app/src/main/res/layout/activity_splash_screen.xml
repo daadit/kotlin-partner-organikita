@@ -14,4 +14,14 @@
         android:layout_height="100dp"
         android:src="@drawable/organikita"/>
 
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textColor="#00aa13"
+        android:gravity="center"
+        android:fontFamily="@font/poppinslight"
+        android:text="Organikita Partner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
 </LinearLayout>

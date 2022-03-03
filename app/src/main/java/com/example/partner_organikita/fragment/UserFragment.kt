@@ -9,12 +9,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.partner_organikita.R
-import com.example.partner_organikita.activity.HubungiKamiActivity
-import com.example.partner_organikita.activity.KebijakanPrivasiActivity
-import com.example.partner_organikita.activity.KetentuanLayananActivity
-import com.example.partner_organikita.activity.LoginActivity
+import com.example.partner_organikita.activity.*
 import com.example.partner_organikita.helper.SharedPref
 import com.example.partner_organikita.util.Config
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -32,6 +30,9 @@ class UserFragment : Fragment() {
     lateinit var llkebijakanprivasi: LinearLayout
     lateinit var llhubungikami: LinearLayout
     lateinit var llnilaikami: LinearLayout
+    lateinit var list1: CardView
+    lateinit var list2: CardView
+    lateinit var list3: CardView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -107,6 +108,21 @@ class UserFragment : Fragment() {
             val ip = Intent( activity, HubungiKamiActivity::class.java)
             startActivity(ip)
         }
+
+        list1.setOnClickListener {
+            val ip = Intent( activity, ComingSoonActivity::class.java)
+            startActivity(ip)
+        }
+
+        list2.setOnClickListener {
+            val ip = Intent( activity, ComingSoonActivity::class.java)
+            startActivity(ip)
+        }
+
+        list3.setOnClickListener {
+            val ip = Intent( activity, ComingSoonActivity::class.java)
+            startActivity(ip)
+        }
     }
 
     private fun refreshApp(){
@@ -125,5 +141,8 @@ class UserFragment : Fragment() {
         llhubungikami = view.findViewById(R.id.llhubungikami)
         llketentuanlayanan = view.findViewById(R.id.llketentuanlayanan)
         llnilaikami = view.findViewById(R.id.llnilaikami)
+        list1 = view.findViewById(R.id.list1)
+        list2 = view.findViewById(R.id.list2)
+        list3 = view.findViewById(R.id.list3)
     }
 }

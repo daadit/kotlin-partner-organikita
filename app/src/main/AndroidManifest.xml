@@ -31,6 +31,7 @@
         <activity android:name=".activity.KebijakanPrivasiActivity" />
         <activity android:name=".activity.KetentuanLayananActivity" />
         <activity android:name=".activity.HubungiKamiActivity" />
+        <activity android:name=".activity.ComingSoonActivity" />
         <activity android:name=".activity.AddImageActivity" />
     </application>
 
