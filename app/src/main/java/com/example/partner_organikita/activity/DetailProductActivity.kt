@@ -8,10 +8,7 @@ import android.text.Editable
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.TextView
+import android.widget.*
 import com.bumptech.glide.Glide
 import com.example.front_startup.helper.Helper
 import com.example.partner_organikita.R
@@ -20,6 +17,8 @@ import com.example.partner_organikita.helper.SharedPref
 import com.example.partner_organikita.model.ProductCategoryModel
 import com.example.partner_organikita.model.ProductModel
 import com.example.partner_organikita.model.ResponseModel
+import com.github.ybq.android.spinkit.sprite.Sprite
+import com.github.ybq.android.spinkit.style.ThreeBounce
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_add_product.*
@@ -40,6 +39,12 @@ class DetailProductActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_product)
+
+        val progressBar = findViewById<View>(R.id.spin_kitadd) as ProgressBar
+        val doubleBounce: Sprite = ThreeBounce()
+        progressBar.indeterminateDrawable = doubleBounce
+
+        spin_kitadd.visibility = View.VISIBLE
 
         getCategory()
         mainButton()
@@ -64,6 +69,7 @@ class DetailProductActivity : AppCompatActivity() {
         txtlebar.text = Editable.Factory.getInstance().newEditable(product.productWide.toString())
         txtpanjang.text = Editable.Factory.getInstance().newEditable(product.productHigh.toString())
 
+        spin_kitadd.visibility = View.GONE
 //        val img = Config.productUrl + product.productImage
 //
 //        Glide
